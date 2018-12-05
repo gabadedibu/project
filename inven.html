@@ -1,0 +1,186 @@
+
+<html>
+<head>
+	<title>inventory system</title>
+</head>
+<style type="text/css">
+body{
+	background-color: white;
+}
+#tab{
+	border-radius: 3px;
+	height: 800px;
+	width: 1300px;
+	margin-top: 40px;
+	color: black;
+
+
+}
+#he{
+	color: black;
+	
+}
+#block{
+	width: 450px;
+	height: 450px;
+	border: 3px solid tomato;
+	margin-left: 1320px;
+	margin-top: -600px;
+}
+img{
+	width: 100px;
+	border-radius: 3px;
+	height: 100px;
+}
+#jj{
+	width: 100px;
+	height: 90px;
+}
+#oni:hover{
+
+
+}
+
+
+</style>
+<body class="body">
+	<h1 id="he" align="center" > welcome</h1>
+<div>
+	<table border="2px"  id="tab">
+		<tr>
+			<td align="center">PRODUCT</td><td align="center">NAME</td><td align="center">Q.A</td><td align="center">U.P</td><td align="center">ORDER</td><td align="center">TOTAL</td>
+		</tr>
+			<tr align="center">
+			<td width="6px" height="2px" ><img src="1.jpeg" onmouseover="view1()" onmouseout="mou()" ></td>
+			<td align="center"> IPHONE X</td>
+			<td id="quantity1">37</td>
+			<td>300,000</td>
+			<td align="center" width="180px" ><input type="number" id="input1" onkeyup="forItem()" style="width: 95%;height: 90%;  font-size: 30px" name=""></td>
+			<td id="total1" ></td>
+		</tr>
+	<tr align="center">
+			<td  ><img id="jj" src="2.jpeg"></td>
+			<td align="center"> APPLE MAC BOOK</td>
+			<td id="quantity2">42</td>
+			<td>500,000</td>
+			<td align="center" width="18px" ><input type="number" id="input2" onkeyup="forItemTwo()"  style="width: 95%;height: 90%; font-size: 30px"  name=""></td>
+			<td id="total2"></td>
+		</tr>
+	<tr align="center">
+			<td><img  src="3.png"></td>
+			<td align="center"> IRON</td>
+			<td id="quantity3">25</td>
+			<td>10,000</td>
+			<td align="center" width="18px" ><input type="number"id="input3" onkeyup="forItemThree()" style="width: 95%;height: 90%;  font-size: 30px" name=""></td>
+			<td  id="total3"></td>
+	<tr align="center">
+			<td><img src="4.jpeg"></td>
+			<td align="center"> SPOON</td>
+			<td id="quantity4">50</td>
+			<td>500</td>
+			<td align="center" width="18px"><input type="number" id="input4" onkeyup="forItemfour()" style="width: 95%;height: 90%;  font-size: 30px" name=""></td>
+			<td  id="total4"></td>
+		</tr>
+	<tr align="center">
+			<td><img src="5.png"></td>
+			<td align="center">POWER BANK</td>
+			<td id="quantity5">30</td>
+			<td>8,000</td>
+			<td align="center" width="18px" ><input type="number" id="input5" onkeyup="forItemfive()" style="width: 95%;height: 90%;  font-size: 30px" name=""></td>
+			<td  id="total5"></td>
+		</tr>
+	<tr align="center">
+			<td><img src="6.png"></td>
+			<td align="center"> MONITOR </td>
+			<td id="quantity6">60</td>
+			<td>100,000</td>
+			<td align="center" width="18px"><input type="number" id="input6" onkeyup="forItemsix()" style="width: 95%;height: 90%;  font-size: 30px" name=""></td>
+			<td  id="total6"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center" align="margin-left 20px">Total</td><td colspan="6"></td>
+		</tr>
+                                                                                                                                                                                                                                                                                                                                                                                                    
+	</table>
+	<div id="block">
+		<tr id="blo"><td></td></tr>
+	</div>
+</div>
+
+</body>
+<script>
+	var itemOne=0;
+	var totalOne=0;
+
+	var itemTwo=0;
+	var totalTwo=0;
+
+
+	var itemthree=0;
+	var totalthree=0;
+
+	var itemfour=0;
+	var totalfour=0;
+
+	var itemfive=0;
+	var totalfive=0;
+
+	var itemsix=0;
+	var totalsix=0;
+
+
+
+		function forItem() {
+			inputOne=input1.value;
+			total1.innerHTML= inputOne * 300000;
+			quantity1.innerHTML= quantity1.innerHTML - inputOne;
+			if (inputOne >=37){
+				total1.innerHTML ="out of stock"
+				quantity1.innerHTML="out of stock"
+			}
+			if(inputOne ==0 ){
+				quantity1.innerHTML=37;
+			}
+			
+			}
+	
+		function forItemTwo() {
+			inputTwo=input2.value;
+			total2.innerHTML= inputTwo * 500000;
+			quantity2.innerHTML= quantity2.innerHTML - inputTwo;
+			if (inputTwo >=42) {
+				total2.innerHTML="out of stock"
+				quantity2.innerHTML=42;
+
+			}
+			if (inputTwo ==0) {
+				quantity2.innerHTML=42;
+			}
+		}
+			function forItemThree() {
+			inputThree=input3.value;
+			total3.innerHTML= inputThree * 10000;
+		}
+	function forItemfour() {
+			inputfour=input4.value;
+			total4.innerHTML= inputfour * 500;
+		}
+	function forItemfive() {
+			inputfive=input5.value;
+			total5.innerHTML= inputfive * 8000;
+		}
+	function forItemsix() {
+			inputsix=input6.value;
+			total6.innerHTML= inputsix * 100000;
+		}
+
+		function view1(){
+			side.innerHTML="<img src='1.jpeg'>";
+		}
+
+		function mou(){
+			side.innerHTML="";
+		}
+ 
+</script>
+</html>
